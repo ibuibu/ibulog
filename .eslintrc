@@ -1,6 +1,15 @@
 {
-  "extends": ["next", "next/core-web-vitals"],
+  "extends": ["next", "next/core-web-vitals", "plugin:tailwindcss/recommended"],
+  "ignorePatterns": ["*.config.js"],
   "rules": {
-    "semi": ["error", "always"]
+    "semi": ["error", "always"],
+    "import/order": [
+      "error",
+      {
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ]
   }
 }

@@ -74,7 +74,7 @@ export default function Home(props: Props) {
 
 const PostCard = ({ path, title, date, description }: FrontMatter) => {
   return (
-    <div className="w-48 m-2 p-4 border-2">
+    <div className="p-4 m-2 w-48 border-2">
       <Link href={path}>
         <a className="text-lg">{title}</a>
       </Link>
