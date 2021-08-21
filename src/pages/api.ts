@@ -1,6 +1,6 @@
 import fs from "fs";
-import glob from "glob";
 import { join } from "path";
+import glob from "glob";
 import matter from "gray-matter";
 
 const postDirPrefix = "posts/";

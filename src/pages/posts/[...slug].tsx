@@ -1,10 +1,13 @@
-import { useRouter } from "next/router";
 // import ErrorPage from 'next/error'
 // import Layout from '../../components/Layout'
-import { getPostDataBySlug, getAllPosts } from "../api";
 import Head from "next/head";
+import { useRouter } from "next/router";
+import Prism from "prismjs";
+import React, { useEffect } from "react";
 import remark from "remark";
 import html from "remark-html";
+import Layout from "../../components/layout";
+import { getPostDataBySlug, getAllPosts } from "../api";
 
 import styles from "./post.module.css";
 
@@ -13,6 +16,7 @@ type PostProps = {
     frontMatter: {
       date: string;
       title: string;
+      icon: string;
     };
     content: string;
   };
@@ -20,23 +24,37 @@ type PostProps = {
 
 const Post = ({ post }: PostProps) => {
   const router = useRouter();
-  const { title, date } = post.frontMatter;
+  const { title, date, icon } = post.frontMatter;
   const content = post.content;
+  useEffect(() => {
+    Prism.highlightAll();
+  });
 
   return (
     <div>
       {router.isFallback ? (
         <h1>Loading…</h1>
       ) : (
-        <>
-          <article className={`${styles.article} mt-16`}>
-            <Head>
-              <title>{title} | ibulog</title>
-            </Head>
-            <p>{date}</p>
-            <div dangerouslySetInnerHTML={{ __html: content }} />
+        <Layout>
+          <Head>
+            <title>{title} | ibulog</title>
+          </Head>
+          <article className={`${styles.article} mt-16 m-auto`}>
+            <main className="p-4">
+              <div className="pb-8 border-b-2 border-black">
+                <div className="flex justify-center p-6">
+                  <span className="text-6xl">{icon}</span>
+                </div>
+                <h1>{title}</h1>
+                <p className="text-gray-500">{date}</p>
+              </div>
+              <div
+                className="pt-8"
+                dangerouslySetInnerHTML={{ __html: content }}
+              />
+            </main>
           </article>
-        </>
+        </Layout>
       )}
     </div>
   );

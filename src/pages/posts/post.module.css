@@ -26,7 +26,17 @@
   h4 {
     @apply text-xl;
   }
+  p {
+    @apply text-gray-600
+  }
+  a {
+    @apply underline hover:bg-purple-600 hover:text-white;
+  }
+  code {
+    @apply px-2 text-sm;
+  }
 }
+
 .body {
   p {
     @apply my-4;

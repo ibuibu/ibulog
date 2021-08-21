@@ -1,5 +1,5 @@
 {
-  "name": "aa",
+  "name": "ibulog",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -13,6 +13,7 @@
     "glob": "^7.1.7",
     "gray-matter": "^4.0.3",
     "next": "11.0.1",
+    "prismjs": "^1.24.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "remark": "^13.0.0",
@@ -20,8 +21,10 @@
   },
   "devDependencies": {
     "@types/glob": "^7.1.4",
+    "@types/prismjs": "^1.16.6",
     "@types/react": "17.0.15",
     "autoprefixer": "^10.3.1",
+    "babel-plugin-prismjs": "^2.1.0",
     "eslint": "7.32.0",
     "eslint-config-next": "11.0.1",
     "eslint-plugin-tailwindcss": "^1.14.3",

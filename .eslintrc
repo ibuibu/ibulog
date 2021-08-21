@@ -2,7 +2,6 @@
   "extends": ["next", "next/core-web-vitals", "plugin:tailwindcss/recommended"],
   "ignorePatterns": ["*.config.js"],
   "rules": {
-    "semi": ["error", "always"],
     "import/order": [
       "error",
       {
