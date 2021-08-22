@@ -16,8 +16,6 @@ export const getPostDataBySlug = (slugs: string[]) => {
   return { frontMatter: data, content };
 };
 
-// 'posts/**/*.md`のすべてのファイルを取得して配列にして返す
-// 'posts/foo.md`と'posts/bar/baz.md'がある場合[["foo"], ["bar", "baz"]]を返す
 export const getAllPosts = () => {
   const entries = glob.sync(`${postDirPrefix}/**/*.md`);
   return entries
