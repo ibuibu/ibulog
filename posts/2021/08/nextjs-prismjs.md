@@ -1,5 +1,5 @@
 ---
-title: "Next.jsでmarkdownのコードブロックをPrismjsでシンタックスハイライトする"
+title: "Next.jsでmarkdownのコードブロックをPrismJSでシンタックスハイライトする"
 date: "2021-08-22"
 icon: "🔆"
 ---
