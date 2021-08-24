@@ -26,26 +26,24 @@ export default function Post({ post }: Props) {
 
   return (
     <Layout>
+      <Head>
+        <title>ibulog | {title}</title>
+      </Head>
       {router.isFallback ? (
         <h1>Loading…</h1>
       ) : (
         <article className="m-auto mt-8">
-          <Head>
-            <title>ibulog | {title}</title>
-          </Head>
-          <div className="p-4">
-            <div className="pb-8 border-b border-black">
-              <div className="flex justify-center p-6">
-                <span className="text-6xl">{icon}</span>
-              </div>
-              <h1 className="text-3xl font-bold">{title}</h1>
-              <p className="my-2 text-gray-500">{date}</p>
+          <div className="pb-8 border-b border-black">
+            <div className="flex justify-center p-6">
+              <span className="text-6xl">{icon}</span>
             </div>
-            <div
-              className={`${styles.article} pt-8`}
-              dangerouslySetInnerHTML={{ __html: content }}
-            />
+            <h1 className="text-3xl font-bold">{title}</h1>
+            <p className="my-2 text-gray-500">{date}</p>
           </div>
+          <div
+            className={`${styles.article} pt-8`}
+            dangerouslySetInnerHTML={{ __html: content }}
+          />
         </article>
       )}
     </Layout>
