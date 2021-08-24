@@ -32,10 +32,10 @@
     @apply underline hover:bg-purple-600 hover:text-white;
   }
   ol {
-    @apply text-sm list-inside list-decimal;
+    @apply pl-2 my-2 text-sm list-inside list-decimal;
   }
   ul {
-    @apply text-sm list-inside list-disc;
+    @apply pl-2 my-2 text-sm list-inside list-disc;
   }
   /* コード */
   p code {
