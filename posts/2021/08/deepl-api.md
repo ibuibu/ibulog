@@ -16,7 +16,44 @@ DeepL API を使って、CLI でできるようにした。
 
 シェルスクリプトでこんな感じのコードを書いて出来上がり。
 
-<script src="https://gist.github.com/ibuibu/ad5e2517e29faeb550d8d7cf96fecd1b.js"></script>
+```shell
+#!/bin/bash
+
+if [ $# != 1 ]; then
+  echo "Let's specify one target language (en or ja) as an argument."
+  exit 1
+fi
+if [ "${1}" != "en" ] && [ "${1}" != "ja" ]; then
+  echo "Let's specify one target language (en or ja) as an argument."
+  exit 1
+fi
+
+while read line; do
+  if [ "${text}" = "" ]; then
+    text="${line}"
+  else
+  text="${text}
+$line"
+  fi
+
+  if [ "$line" == "" ]; then
+    echo "Now translating..."
+    echo ""
+    break
+  fi
+done
+
+apikey=$(cat ~/credentials/deepl-apikey)
+
+result=$(curl -s https://api-free.deepl.com/v2/translate \
+-d "auth_key=${apikey}" \
+-d "text=${text}" \
+-d "target_lang=${1}" \
+| jq -r '.translations[].text')
+
+echo ${result}
+echo ${result} | pbcopy
+```
 
 実行後に Enter ２回押せば、API から翻訳後文章を取得して標準出力する。
 
