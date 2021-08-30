@@ -23,7 +23,7 @@ GA4は以下のメリットがあるらしい。
 
 Next.js公式リポジトリに[サンプルコード](https://github.com/vercel/next.js/tree/canary/examples/with-google-analytics)があり、これに基づいた日本語記事のサイトがいくつかあったので、参考にさせていただいて実装した。
 
-SSGの本記事もこの方法で計測できた。
+SSGの本ブログもこの方法で計測できた。
 
 
 ### 必要な型定義ファイルをインストール
