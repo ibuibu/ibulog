@@ -6,7 +6,7 @@ icon: "👋"
 
 なんとなく気分でブログを新しくした。Next.js製。
 
-[前のブログ](awesome-nightingale-e9e443.netlify.app)は気分が乗らず更新しなくなってしまった。たぶん原因は３つ。
+[前のブログ](https://awesome-nightingale-e9e443.netlify.app)は気分が乗らず更新しなくなってしまった。たぶん原因は３つ。
 
 - ヘッドレスCMSのContentful経由で記事を取得する作りにしたのだが、Contentfulの書き味が悪く、なかなか書く気になれなかった。
 - サムネイル画像を記事ごとに用意するのがダルかった。
