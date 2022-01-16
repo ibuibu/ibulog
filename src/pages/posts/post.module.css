@@ -26,7 +26,7 @@
     @apply text-xl;
   }
   p {
-    @apply text-sm leading-8;
+    @apply text-sm leading-8 py-2;
   }
   a {
     @apply underline hover:bg-purple-600 hover:text-white;
