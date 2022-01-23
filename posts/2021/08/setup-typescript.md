@@ -2,11 +2,12 @@
 title: "TypeScript + webpackのプロジェクトを一撃でセットアップする"
 date: "2021-08-26"
 icon: "👊"
+tags: ["TypeScript"]
 ---
 
-以下はさっとTSでコードを書きたいときにプロジェクトを一撃で作ってくれるシェルスクリプト。
+以下はさっと TS でコードを書きたいときにプロジェクトを一撃で作ってくれるシェルスクリプト。
 
-プロジェクト名を引数に与えて実行すれば、index.html + main.jsなザ・シンプルなプロジェクトを一撃で立ち上げてくれる。
+プロジェクト名を引数に与えて実行すれば、index.html + main.js なザ・シンプルなプロジェクトを一撃で立ち上げてくれる。
 
 実はこれ半年前ぐらいに作ったものだったのだが、最近ちょっとアップデートした。
 
@@ -103,31 +104,30 @@ EOS
 
 ```
 
-最近アップデートした箇所というのは、`html-loader`と`html-webpack-plugin`を使って、index.htmlをsrcフォルダ内で管理できるようにしたところ。
+最近アップデートした箇所というのは、`html-loader`と`html-webpack-plugin`を使って、index.html を src フォルダ内で管理できるようにしたところ。
 
-以前はdistフォルダにindex.htmlを格納していた。main.jsしか読まないからええやろ、と思っていたが、distをGitHubにアップするのは非常にキモことに気がついたので、修正を図った。
+以前は dist フォルダに index.html を格納していた。main.js しか読まないからええやろ、と思っていたが、dist を GitHub にアップするのは非常にキモことに気がついたので、修正を図った。
 
-一見、src/index.htmlはscriptタグでmain.jsを読んでないが大丈夫？って思うが、先のプラグインが勝手にscriptタグを以下のように追加してくれる。
+一見、src/index.html は script タグで main.js を読んでないが大丈夫？って思うが、先のプラグインが勝手に script タグを以下のように追加してくれる。
 
 ```html
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-<!-- ここな -->
-<script defer src="main.js"></script></head>
-<body>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- ここな -->
+    <script defer src="main.js"></script>
+  </head>
+  <body></body>
 </html>
 ```
 
-恥ずかしながら`defer`なる呪文を知らなかったため、headタグ内じゃだめだろと思ってしまったが、調べてみて納得した。
+恥ずかしながら`defer`なる呪文を知らなかったため、head タグ内じゃだめだろと思ってしまったが、調べてみて納得した。
 
 ![https://html.spec.whatwg.org/images/asyncdefer.svg](https://html.spec.whatwg.org/images/asyncdefer.svg)
 
 [https://html.spec.whatwg.org/multipage/scripting.html#attr-script-async](https://html.spec.whatwg.org/multipage/scripting.html#attr-script-async)
 
-文字通りHTMLパースを待ってからJSを実行してくれるようだ。これがナウいscriptタグの書き方なのか。。
-
+文字通り HTML パースを待ってから JS を実行してくれるようだ。これがナウい script タグの書き方なのか。。

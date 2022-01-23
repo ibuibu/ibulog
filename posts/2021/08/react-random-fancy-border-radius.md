@@ -2,9 +2,10 @@
 title: "Reactコンポーネントをnpmパッケージ公開した"
 date: "2021-08-27"
 icon: "🎁"
+tags: ["React"]
 ---
 
-最近作った某サイトで使用したデザインを、Reactコンポーネント化してみた。
+最近作った某サイトで使用したデザインを、React コンポーネント化してみた。
 
 [npm](https://www.npmjs.com/package/react-random-fancy-border-radius)
 
@@ -14,9 +15,8 @@ icon: "🎁"
 
 こんな感じで、画像をレンダリング毎にランダムにフワッとした不思議な形で表示するもの。
 
-作りとしては、以下のサイトの機構を基にして、CSSのborder-radiusの値をレンダリング毎にランダムにしただけの超カンタンな代物。
+作りとしては、以下のサイトの機構を基にして、CSS の border-radius の値をレンダリング毎にランダムにしただけの超カンタンな代物。
 
 [https://github.com/9elements/fancy-border-radius](https://github.com/9elements/fancy-border-radius)
 
-npmパッケージの公開の仕方がわかって勉強になった。
-
+npm パッケージの公開の仕方がわかって勉強になった。

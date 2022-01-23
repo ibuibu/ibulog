@@ -2,6 +2,7 @@
 title: "TypeScript + Jestで型の違う引数の異常系テストを書く"
 date: "2021-08-28"
 icon: "🆖"
+tags: ["Typescript", "Jest"]
 ---
 
 TypeScriptにおいて、型チェックを内部で実行する関数について異常系のテストを書くとき、

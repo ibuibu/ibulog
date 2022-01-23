@@ -2,6 +2,7 @@
 title: "PostCSS-Nestedの導入"
 date: "2021-08-23"
 icon: "📭"
+tags: ["PostCSS"]
 ---
 
 Tailwind CSS で、javascript で markdown を HTML 化する際、HTML が未確定なため CSS を書き込めなくて困った。

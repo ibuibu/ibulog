@@ -2,16 +2,16 @@
 title: "git checkoutをfzfでいい感じにする"
 date: "2022-01-23"
 icon: "🌵"
+tags: ["Git"]
 ---
 
-いつも`git checkout`するときはzshの補完でbranchを選択していたが、まあまあ使いにくいので、[GitHub CLIのextension](https://github.com/mislav/gh-branch)を使ってみたのだが、ものすごく遅い。やっぱりGitHub CLIは遅い。。
+いつも`git checkout`するときは zsh の補完で branch を選択していたが、まあまあ使いにくいので、[GitHub CLI の extension](https://github.com/mislav/gh-branch)を使ってみたのだが、ものすごく遅い。やっぱり GitHub CLI は遅い。。
 
-ので、自分でfzfを使ったコマンドを作った。
+ので、自分で fzf を使ったコマンドを作った。
 
 出来栄えはこんな感じ。
 
 ![gb](https://i.imgur.com/6RoeINq.png)
-
 
 コマンドはこれ。
 
@@ -25,8 +25,7 @@ function gb() {
 
 こだわりポイントは以下２点。
 
-- formatオプションで、最終更新がどれくらい前だったかと、更新者を出力
-- columnコマンドで縦を揃えてキレイに出力
+- format オプションで、最終更新がどれくらい前だったかと、更新者を出力
+- column コマンドで縦を揃えてキレイに出力
 
-ちなみにcolumnコマンドの`-s`オプションでTabを指定しようとしたが、Macだと`printf`でTabを出力してやらないとうまくいかなかった。
-
+ちなみに column コマンドの`-s`オプションで Tab を指定しようとしたが、Mac だと`printf`で Tab を出力してやらないとうまくいかなかった。

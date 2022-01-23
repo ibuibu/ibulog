@@ -2,6 +2,7 @@
 title: "自作キーボードを使い始めて1年（と2ヶ月）経った"
 date: "2021-08-24"
 icon: "⌨️"
+tags: ["自作キーボード", "雑記"]
 ---
 
 ![Ergo Dash](https://i.imgur.com/wQTMbPw.jpg)
