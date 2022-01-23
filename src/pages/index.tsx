@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Link from "next/link";
 import Layout from "../components/layout";
 import { getAllPosts, getPostDataBySlug } from "./api";
@@ -23,9 +22,6 @@ export default function Home(props: Props) {
   return (
     <Layout>
       <section className="flex flex-col justify-center items-start">
-        <Head>
-          <title>ibulog</title>
-        </Head>
         {props.posts.map(({ frontMatter }, index) => {
           return <PostCard key={index} frontMatter={frontMatter} />;
         })}
