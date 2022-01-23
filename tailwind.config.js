@@ -6,7 +6,11 @@ module.exports = {
   ],
   darkMode: false,
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "my-gray": "#696969",
+      },
+    },
   },
   variants: {
     extend: {},

@@ -25,6 +25,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           content={description}
         />
         <meta property="og:title" key="og:title" content={title} />
+        <title>{title}</title>
       </Head>
       <header className="my-4 border-b border-black">
         <h1 className="my-4">{siteTitleElement}</h1>

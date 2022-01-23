@@ -2,6 +2,7 @@
 title: "Next.jsでmarkdownのコードブロックをPrismJSでシンタックスハイライトする"
 date: "2021-08-22"
 icon: "🔆"
+tags: ["Next.js"]
 ---
 
 本ブログを作成する際に実施した内容。

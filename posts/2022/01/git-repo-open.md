@@ -2,6 +2,7 @@
 title: "GitHubをブラウザで開くコマンド"
 date: "2022-01-22"
 icon: "🛫"
+tags: ["Git"]
 ---
 
 いままで、githubのブラウザを開くために、`GitHub CLI`の以下コマンドを利用していた。

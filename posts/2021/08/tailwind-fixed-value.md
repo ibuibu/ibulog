@@ -2,6 +2,7 @@
 title: "Tailwind CSSでwidth等に固定値を使う方法"
 date: "2021-08-21"
 icon: "💨"
+tags: ["Tailwind CSS"]
 ---
 
 例えば、こんなふうに固定値を指定することができる。
@@ -12,9 +13,9 @@ icon: "💨"
 
 数値のところに単位（px）を付けて、`[]`で括る。
 
-なお、使用する際には、Tailwind CSSをJust in time（jit） モードにする必要がある。
+なお、使用する際には、Tailwind CSS を Just in time（jit） モードにする必要がある。
 
-jitモードにするには、`tailwind.config.js`に１行追加する。
+jit モードにするには、`tailwind.config.js`に１行追加する。
 
 ```javascript
 // tailwind.config.js
