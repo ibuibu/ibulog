@@ -1,5 +1,5 @@
 ---
-title: "ホスティングサービス（Netlify, Vercel, Firebase Hosting）の比べてみて"
+title: "ホスティングサービス（Netlify, Vercel, Firebase Hosting）を使ってみて"
 date: "2022-02-01"
 icon: "⏫"
 tags: ["Hosting"]
