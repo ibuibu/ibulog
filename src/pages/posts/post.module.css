@@ -7,10 +7,14 @@
   h6 {
     @apply font-body font-bold;
   }
-  h2,
-  h3,
+  h2 {
+    @apply mt-16;
+  }
+  h3 {
+    @apply mt-8;
+  }
   h4 {
-    @apply mt-16 mb-4;
+    @apply mt-6;
   }
   h1 {
     @apply text-4xl;
@@ -25,7 +29,7 @@
     @apply text-xl;
   }
   p {
-    @apply text-sm leading-8 py-2;
+    @apply text-base leading-8 mt-6;
   }
   a {
     @apply underline hover:bg-purple-600 hover:text-white;
@@ -37,6 +41,12 @@
   ul {
     @apply pl-2 my-2 text-sm list-disc;
     padding-inline-start: 2rem;
+  }
+  ol p {
+    @apply mt-2;
+  }
+  ul p {
+    @apply mt-2;
   }
   /* コード */
   p code {
