@@ -30,7 +30,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <header className="my-4 border-b border-black">
         <h1 className="my-4">{siteTitleElement}</h1>
       </header>
-      <main className="p-4 mx-auto max-w-[650px]">{children}</main>
+      <main className="p-4 mx-auto max-w-[650px] font-body">{children}</main>
       <footer className="my-4 text-center border-t border-black">
         <p className="my-4">© 2021 ibuibu69</p>
       </footer>
