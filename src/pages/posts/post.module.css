@@ -32,9 +32,11 @@
   }
   ol {
     @apply pl-2 my-2 text-sm list-decimal;
+    padding-inline-start: 2rem;
   }
   ul {
     @apply pl-2 my-2 text-sm list-disc;
+    padding-inline-start: 2rem;
   }
   /* コード */
   p code {
