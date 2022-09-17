@@ -18,3 +18,4 @@ echo "\e[31m red \e[m"
 echo red | sed "s/red/\x1b[31mRED\x1b[m/"
 ```
 
+ちなみに、そんなふうにして色を付けた結果を`fzf`したいときは、`--ansi`オプションを付ければよい。
