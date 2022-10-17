@@ -31,7 +31,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <h1 className="my-4">{siteTitleElement}</h1>
       </header>
       <main className="p-4 mx-auto max-w-[750px] font-body">{children}</main>
-      <footer className="py-4 text-center border-t border-black">
+      <footer className="py-4 mt-8 text-center border-t border-black">
         <span className="m-4">© 2021 ibuibu69</span>
         <a
           target="_blank"
