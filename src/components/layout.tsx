@@ -31,8 +31,24 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <h1 className="my-4">{siteTitleElement}</h1>
       </header>
       <main className="p-4 mx-auto max-w-[750px] font-body">{children}</main>
-      <footer className="my-4 text-center border-t border-black">
-        <p className="my-4">© 2021 ibuibu69</p>
+      <footer className="py-4 text-center border-t border-black">
+        <span className="m-4">© 2021 ibuibu69</span>
+        <a
+          target="_blank"
+          href="https://twitter.com/ibuibu69"
+          rel="noopener noreferrer"
+          className="m-4 hover:text-white underline hover:bg-purple-600"
+        >
+          Twitter
+        </a>
+        <a
+          target="_blank"
+          href="https://github.com/ibuibu"
+          rel="noopener noreferrer"
+          className="m-4 hover:text-white underline hover:bg-purple-600"
+        >
+          GitHub
+        </a>
       </footer>
     </div>
   );
