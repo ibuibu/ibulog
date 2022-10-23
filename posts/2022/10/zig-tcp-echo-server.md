@@ -44,6 +44,8 @@ pub fn main() anyerror!void {
 }
 ```
 
+[Gist](https://gist.github.com/ibuibu/888b08c429bc9f39b96b08cd6446bf23)
+
 本当は前に作った[Rust製STUNサーバ](https://github.com/ibuibu/rust-stun)のZig実装を作ろうと、UDPサーバを作りたかったのだが、[std.net](https://github.com/ziglang/zig/blob/master/lib/std/net.zig)パッケージにはTCPしか実装されていなかったので、とりあえずTCPサーバだけ作ってみた。
 
 新しい言語なので、TCPサーバの作り方どころか文字列から数値へのキャスト方法すらググってもまともにヒットせず、[ドキュメント](https://ziglang.org/documentation/master/)を見ても書いていなかったりで、なかなかに苦労した。
