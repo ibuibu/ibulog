@@ -2,7 +2,7 @@
 title: "TypeScript + Jestでプライベートプロパティの異常系テストを書く"
 date: "2021-08-29"
 icon: "㊙️"
-tags: ["Typescript", "Jest"]
+tags: ["TypeScript", "Jest"]
 ---
 
 TypeScript を使った Jest において、あるオブジェクトのプライベートプロパティにアクセスしたいときは、クラス自体を`as any`でキャストしてしまうという無理やりな方法で対処する。（他にいい方法があれば教えて欲しい）
