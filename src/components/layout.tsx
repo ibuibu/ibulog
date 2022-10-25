@@ -1,18 +1,24 @@
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
+  const path = useRouter().pathname;
+
+  const pageLinkStyle = "my-2 mx-4 text-xl font-bold";
+  const selectedPageLinkStyle = pageLinkStyle + " border-b border-black";
+
   const description = "blog by ibuibu69";
   const title = "ibulog";
+
   const siteTitleElement = (
     <div className="text-center">
       <Link href="/">
-        <a className="text-4xl font-bold" data-prefetch>
-          {title}
-        </a>
+        <a className="text-4xl font-bold">{title}</a>
       </Link>
     </div>
   );
+
   return (
     <div>
       <Head>
@@ -29,6 +35,22 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       </Head>
       <header className="my-4 border-b border-black">
         <h1 className="my-4">{siteTitleElement}</h1>
+        <div className="flex justify-center">
+          <Link href="/">
+            <a className={path == "/" ? selectedPageLinkStyle : pageLinkStyle}>
+              Blog
+            </a>
+          </Link>
+          <Link href="/experiments">
+            <a
+              className={
+                path == "/experiments" ? selectedPageLinkStyle : pageLinkStyle
+              }
+            >
+              Experiments
+            </a>
+          </Link>
+        </div>
       </header>
       <main className="p-4 mx-auto max-w-[750px] font-body">{children}</main>
       <footer className="py-4 mt-8 text-center border-t border-black">
