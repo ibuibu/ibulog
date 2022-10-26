@@ -82,7 +82,10 @@ const PostCard = (props: { frontMatter: FrontMatter }) => {
           <p className="my-1 text-xs text-my-gray">{date}</p>
           {tags.map((tag) => {
             return (
-              <small key={tag} className="py-0.5 px-1.5 mx-1 text-white bg-my-gray">
+              <small
+                key={tag}
+                className="py-0.5 px-1.5 mx-1 text-white bg-my-gray"
+              >
                 {tag}
               </small>
             );

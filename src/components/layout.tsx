@@ -1,3 +1,5 @@
+import { faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -59,17 +61,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           target="_blank"
           href="https://twitter.com/ibuibu69"
           rel="noopener noreferrer"
-          className="m-4 hover:text-white underline hover:bg-purple-600"
+          className=" m-4"
         >
-          Twitter
+          <FontAwesomeIcon icon={faTwitter} className="mx-2 text-2xl" />
         </a>
         <a
           target="_blank"
           href="https://github.com/ibuibu"
           rel="noopener noreferrer"
-          className="m-4 hover:text-white underline hover:bg-purple-600"
+          className=" m-4"
         >
-          GitHub
+          <FontAwesomeIcon icon={faGithub} className="mx-2 text-2xl" />
         </a>
       </footer>
     </div>
