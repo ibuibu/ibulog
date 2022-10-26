@@ -41,13 +41,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               Blog
             </a>
           </Link>
-          <Link href="/experiments">
+          <Link href="/works">
             <a
               className={
-                path == "/experiments" ? selectedPageLinkStyle : pageLinkStyle
+                path == "/works" ? selectedPageLinkStyle : pageLinkStyle
               }
             >
-              Experiments
+              Works
             </a>
           </Link>
         </div>
