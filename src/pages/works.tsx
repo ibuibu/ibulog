@@ -42,6 +42,12 @@ export default function Home() {
         tag="TypeScript"
       />
       <WorkCard
+        title="Rust-STUN"
+        path="https://github.com/ibuibu/rust-stun"
+        description="Rustで実装した、STUNサーバ"
+        tag="Rust"
+      />
+      <WorkCard
         title="東京オジサウナ Webサイト"
         path="https://www.ojisauna.com/"
         description="東京のサウナを巡るおじさん３人組、「東京オジサウナ」のWebサイト"
