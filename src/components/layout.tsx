@@ -15,8 +15,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   const siteTitleElement = (
     <div className="text-center">
-      <Link href="/">
-        <a className="text-4xl font-bold">{title}</a>
+      <Link className="text-4xl font-bold" href="/">
+        {title}
       </Link>
     </div>
   );
@@ -38,19 +38,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <header className="my-4 border-b border-black">
         <h1 className="my-4">{siteTitleElement}</h1>
         <div className="flex justify-center">
-          <Link href="/">
-            <a className={path == "/" ? selectedPageLinkStyle : pageLinkStyle}>
-              Blog
-            </a>
+          <Link
+            className={path == "/" ? selectedPageLinkStyle : pageLinkStyle}
+            href="/"
+          >
+            Blog
           </Link>
-          <Link href="/works">
-            <a
-              className={
-                path == "/works" ? selectedPageLinkStyle : pageLinkStyle
-              }
-            >
-              Works
-            </a>
+          <Link
+            className={path == "/works" ? selectedPageLinkStyle : pageLinkStyle}
+            href="/works"
+          >
+            Works
           </Link>
         </div>
       </header>

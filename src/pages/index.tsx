@@ -74,8 +74,8 @@ export default function Home(props: Props) {
 const PostCard = (props: { frontMatter: FrontMatter }) => {
   const { path, title, date, icon, tags } = props.frontMatter;
   return (
-    <Link href={path} passHref>
-      <div className="flex p-4 my-2 w-full border border-black transition duration-200 transform hover:scale-105 hover:rotate-2 cursor-pointer">
+    <Link className="w-full" href={path} passHref>
+      <div className="flex p-4 my-2 border border-black transition duration-200 transform hover:scale-105 hover:rotate-2 cursor-pointer">
         <p className="flex items-center p-4 pr-8 text-4xl">{icon}</p>
         <div>
           <p className="text-2xl font-bold">{title}</p>
